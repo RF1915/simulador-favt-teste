@@ -51,4 +51,5 @@ def load_excel():
 
     infra = wb["Factor5_infra"]
     infra_df = pd.DataFrame(
-        [[infra.cell(r, c)]()]()
+        [[infra.cell(r, c).value for c in range(2, 4)] for r in range(8, 20)]
+)
